@@ -39,6 +39,10 @@ TYPES section为设定你需要哪些种类的资源，见README.md开头
 
 当UPDATE section不是全为0时，会通过difficulty.csv获取最近的歌曲，当Phigros更新时使用，更新了哪个部分，更新了几首，运行resource.py时只会提取最近几首的资源
 # 使用示例
+安装所需的库(如果手动安装请注意pyfmodex<=0.7.0)
+```shell
+pip install -r requirement.txt
+```
 taptap下载的apk
 ```shell
 pip3 install UnityPy
