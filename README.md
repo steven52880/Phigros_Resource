@@ -59,3 +59,15 @@ cd PhigrosLibrary_Resource
 python3 gameInformation.py Phigros.apk
 python3 resource.py Phigros.obb
 ```
+
+# 打包为Phira支持的谱面
+由于直接解包出来的曲子音乐文件(wav)和曲绘文件(png)较大，将其转换为码率128k的mp3音频和jpg图片  
+以下两个脚本将会使用ffmpeg转换媒体，请自行下载并添加环境变量
+```shell
+python3 convertmp3.py
+python3 convertjpg.py
+```
+将每首歌的每个等级分别打包为单独的zip谱面文件，可以直接导入Phira
+```shell
+python3 pack.py
+```

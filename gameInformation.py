@@ -3,6 +3,7 @@ import struct
 import sys
 from UnityPy import Environment
 import zipfile
+import csv
 
 
 
@@ -105,9 +106,8 @@ def run(path):
             f.write("\n")
 
     with open("info.csv", "w", encoding="utf8") as f:
-        for item in table:
-            f.write("\\".join(item))
-            f.write("\n")
+        writer = csv.writer(f, delimiter="\\", lineterminator="\n")
+        writer.writerows(table)
 
     key_schema = {"key": str, "a": int, "type": int, "b": int}
     single = []
